@@ -1,7 +1,7 @@
 {
-    "bg": "https://articles.gamerheadquarters.com/images/top10/movies/10.jpg?resize=1536%2C1208&ssl=1",
+    "bg": "https://uploaddeimagens.com.br/images/003/053/125/full/java-10.png?1611693289?resize=1536%2C1208&ssl=1",
     "title": "Quiz CSS da Alura",
-    "description": "Teste os seus conhecimentos sobre CSS e vamos ver quantos layouts você vai deixar de quebrar",
+    "description": "Teste os seus conhecimentos sobre JAVA",
     "questions": [
       {
         "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
@@ -24,6 +24,17 @@
            "background: linear-gradient(#e66465, #9198e5);",
            "background: gradient(#e66465, #9198e5);"
         ]
+      },
+      {
+        "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
+        "title": "o que faz o metodo equals ?",
+        "description": "Essa é pra aquecer",
+        "answer": 1,
+        "alternatives": [
+          "compara o conteudo de dois objetos",
+          "compara tipos inteiros"
+
+        ]
       }
     ],
     "external": [
@@ -31,7 +42,7 @@
     ],
     "theme": {
       "colors": {
-        "primary": "#4CAF50",
+        "primary": "black",
         "secondary": "#29b6f6",
         "mainBg": "#171B35",
         "contrastText": "#FFFFFF",
