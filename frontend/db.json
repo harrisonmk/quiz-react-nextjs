@@ -29,7 +29,7 @@
         "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
         "title": "o que faz o metodo equals ?",
         "description": "Essa é pra aquecer",
-        "answer": 1,
+        "answer": 0,
         "alternatives": [
           "compara o conteudo de dois objetos",
           "compara tipos inteiros"
