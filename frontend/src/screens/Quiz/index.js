@@ -1,12 +1,17 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-import db from '../db.json';
-import Widget from '../src/componentes/Widget';
-import QuizLogo from '../src/componentes/QuizLogo';
-import QuizBackground from '../src/componentes/QuizBackground';
-import QuizContainer from '../src/componentes/QuizContainer';
-import AlternativesForm from '../src/componentes/AlternativesForm';
-import Button from '../src/componentes/Button';
+
+
+// import db from '../../../db.json';
+import Widget from '../../componentes/Widget';
+import QuizLogo from '../../componentes/QuizLogo';
+import QuizBackground from '../../componentes/QuizBackground';
+import QuizContainer from '../../componentes/QuizContainer';
+import AlternativesForm from '../../componentes/AlternativesForm';
+import Button from '../../componentes/Button';
+import BackLinkArrow from '../../componentes/BackLinkArrow';
+
+import loadingAnimation from './animations/loading.json';
 
 
 function ResultWidget({results}) {
@@ -57,8 +62,8 @@ function LoadingWidget() {
                 Carregando...
             </Widget.Header>
 
-            <Widget.Content>
-                [Desafio do Loading]
+            <Widget.Content style={{ display: 'flex', justifyContent: 'center' }}>
+
             </Widget.Content>
         </Widget>
     );
@@ -161,13 +166,15 @@ const screenStates = {
     LOADING: 'LOADING',
     RESULT: 'RESULT',
 };
-export default function QuizPage() {
+export default function QuizPage({externalQuestions,externalBg}) {
     const [screenState, setScreenState] = React.useState(screenStates.LOADING);
     const [results, setResults] = React.useState([]);
-    const totalQuestions = db.questions.length;
     const [currentQuestion, setCurrentQuestion] = React.useState(0);
     const questionIndex = currentQuestion;
-    const question = db.questions[questionIndex];
+    const question = externalQuestions[questionIndex];
+    const totalQuestions = externalQuestions.length;
+    const bg = externalBg;
+
 
     function addResult(result) {
         // results.push(result);
@@ -199,7 +206,7 @@ export default function QuizPage() {
     }
 
     return (
-        <QuizBackground backgroundImage={db.bg}>
+        <QuizBackground backgroundImage={bg}>
             <QuizContainer>
                 <QuizLogo/>
                 {screenState === screenStates.QUIZ && (
